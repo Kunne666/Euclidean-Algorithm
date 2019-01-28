@@ -10,8 +10,6 @@ using namespace std;
 
 int main()
 {
-	// 前判定型反復構造
-
 	int a, b, r;
 
 	cout << "大きい方の値を入力してください。" << endl;
@@ -19,16 +17,23 @@ int main()
 	cout << "小さい方の値を入力してください。" << endl;
 	cin >> b;
 
+	// 前判定型反復構造
 	r = a%b;
-
 	while (r != 0)
 	{
 		a = b;
 		b = r;
 		r = a%b;
 	}
+	cout << "前判定型反復構造:最大公約数は" << b << "です。" << endl;
 
-	cout << "最大公約数は" << b << "です。" << endl;
+	//// 後判定型反復構造
+	//do {
+	//	r = a%b;
+	//	a = b;
+	//	b = r;
+	//} while (r != 0);
+	//cout << "後判定型反復構造:最大公約数は" << a << "です。" << endl;
 
 	// 入力待ち
 	cin.get();
